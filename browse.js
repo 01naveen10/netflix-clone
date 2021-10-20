@@ -17,3 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     }).mount();
 });
+
+let splide__list = document.querySelector(".splide__list");
+
+splide__list.addEventListener("click", function(e) {
+    const ele = e.path[0].childNodes[1].src;
+    console.log(ele);
+    document
+        .querySelector(".movie-info")
+        .insertAdjacentHTML("afterend", `<img src = "${ele}">`);
+});
