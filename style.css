@@ -1,0 +1,473 @@
+/* Global Styles */
+
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/68c9706b-acd1-4472-bb1d-ef3ca933154c/2c7c702c-ed2b-4437-9786-5e9bbcb11599/IN-en-20211011-popsignuptwoweeks-perspective_alpha_website_small.jpg") no-repeat center center/cover;
+    margin-top: 2vh;
+}
+
+.showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 20px 10px 25px #000000, inset -20px -10px 25px #000000;
+}
+
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+.showcase-top img {
+    width: 170px;
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    margin-left: 0;
+}
+
+.showcase-top select {
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    transform: translate(-50%, -50%);
+    padding: 0.4rem;
+    font-family: "FontAwesome", "Arial";
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.showcase-top option {
+    font-family: "arial";
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 1.1;
+    margin: 1rem auto;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    margin: 1rem auto;
+}
+
+.email-form {
+    flex-direction: row;
+    float: left;
+    font-size: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.email-form div {
+    display: inline-block;
+    max-width: 500px;
+    position: relative;
+    margin: 0;
+}
+
+.email-form input {
+    width: 100%;
+    height: auto;
+    padding: 1.6rem 15rem;
+}
+
+.email-form a {
+    display: inline-block;
+    border-radius: 0;
+    padding: 1rem 4rem;
+}
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: #000;
+    padding: 70px 45px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 5rem;
+    display: flex;
+}
+
+.container div {
+    align-self: center;
+}
+
+.card-img {
+    position: relative;
+    z-index: 2;
+    height: auto;
+    max-width: 100%;
+    right: 0;
+}
+
+.featured-video {
+    display: block;
+}
+
+.featured-video div {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 32%;
+    max-height: 32%;
+    position: absolute;
+    top: 52%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+}
+
+.card-video {
+    display: inline-block;
+    vertical-align: baseline;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.container-fluid {
+    position: relative;
+    max-width: 50%;
+}
+
+.faq {
+    position: relative;
+}
+
+.faq h1 {
+    max-width: 50rem;
+    margin: 4rem auto;
+}
+
+.accordin-item {
+    width: 10rem;
+    background-color: #303030;
+}
+
+.accordin-header {
+    max-width: 100%;
+}
+
+.accordion-item:first-of-type,
+.accordion-item:last-of-type {
+    border: none;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
+.accordion-button,
+.accordion-body,
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    background-color: #303030;
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgb(0 0 0 / 25%);
+}
+
+.containered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.email-form {
+    margin-top: 1rem;
+}
+
+#language-dropdown {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "FontAwesome", "Arial";
+}
+
+.footer {
+    display: block;
+    background-color: #000;
+    max-width: 60%;
+    margin: 1rem auto;
+    overflow: auto;
+    margin-top: 5rem;
+}
+
+.footer,
+.footer a {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li {
+    line-height: 1.9;
+}
+
+.footer .lang-select {
+    margin-top: 2rem;
+    color: #999;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #333;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+.btn-icon {
+    margin-left: 1rem;
+}
+
+@media (max-width: 960px) {
+    .showcase {
+        height: 70vh;
+    }
+    .hide-sm {
+        display: none;
+    }
+    .showcase-top img {
+        top: 10%;
+        left: 5%;
+        transform: translate(0);
+        width: 20%;
+    }
+    .showcase-top select {
+        top: 20%;
+        right: 15%;
+        transform: translate(-75%, -75%);
+        padding: 0.1rem;
+        font-size: 0.8rem;
+    }
+    .showcase-top a {
+        top: 15%;
+        right: 8%;
+        transform: translate(-50%, -50%);
+        padding: 0.1rem;
+        font-size: 0.8rem;
+    }
+    .showcase-content {
+        width: 90%;
+        margin-top: 2rem;
+    }
+    h1 {
+        font-size: 1.725rem;
+    }
+    h2 {
+        font-size: 1.125rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .showcase-content p {
+        font-size: 1rem;
+    }
+    .email-form {
+        margin-left: 10%;
+    }
+    .email-form div {
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+    .email-form input {
+        width: 100%;
+        height: auto;
+        padding: 0.6rem 6rem;
+    }
+    .email-form a {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.5rem;
+    }
+    .jumbotron {
+        width: 100%;
+        height: 60vh;
+        padding: 5rem 0.1rem;
+        border-bottom: 1rem solid #333;
+        margin: 1vh auto;
+    }
+    .last-jumbo {
+        padding: 1.2rem 0.1rem;
+    }
+    .container {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        margin: 1vh auto;
+    }
+    .container div {
+        order: 1;
+        margin: 2rem auto;
+    }
+    .featured-video div {
+        order: 2;
+        max-width: 60%;
+        max-height: 60%;
+        top: 66%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .featured-video:nth-child(1) div {
+        top: 34%;
+    }
+    .container-fluid {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    .faq h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        max-width: 15rem;
+        margin: 4rem auto;
+    }
+    .accordin-item {
+        width: 10rem;
+        background-color: #303030;
+    }
+    .containered {
+        text-align: center;
+    }
+    .footer .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .btn-xl {
+        font-size: 1.5rem;
+        padding: 1.4rem 2rem;
+        text-transform: uppercase;
+    }
+}

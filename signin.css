@@ -1,0 +1,250 @@
+/* Global Styles */
+
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/68c9706b-acd1-4472-bb1d-ef3ca933154c/2c7c702c-ed2b-4437-9786-5e9bbcb11599/IN-en-20211011-popsignuptwoweeks-perspective_alpha_website_small.jpg") no-repeat center center/cover;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    object-fit: contain;
+    margin-bottom: 5vh;
+}
+
+.showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: inset 2px 1px 5px #000000;
+}
+
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+    margin-top: 2vh;
+}
+
+.showcase-top img {
+    width: 170px;
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    margin-left: 0;
+}
+
+.showcase {
+    margin: 0 auto;
+    margin-bottom: 20vh;
+}
+
+.signUp {
+    z-index: 10;
+    width: 28rem;
+    height: 40rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 20vh;
+}
+
+.signUp h1 {
+    padding: 0.1rem;
+    margin-left: 3rem;
+}
+
+.signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input {
+    margin: 1.5rem auto;
+    padding: 1.1rem;
+    height: 1rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+    background-color: #333;
+    color: #999;
+    font-size: 1rem;
+}
+
+.btn-sign {
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    transition: opacity 0.2s ease-in;
+    border-radius: 5px;
+    padding: 1rem 4rem;
+    width: 100%;
+}
+
+.checkhelp {
+    margin: auto;
+    padding: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.checkhelp div {
+    width: 50%;
+}
+
+.checkhelp div span {
+    top: 20;
+}
+
+input[type="checkbox"] {
+    margin: 0;
+    padding: 0 auto;
+    height: 100%;
+    width: 15%;
+}
+
+.footer {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    max-width: 100%;
+    padding: 2.5rem 10rem;
+    margin: 1rem 0 auto;
+    overflow: auto;
+    margin-top: 2rem;
+}
+
+.footer,
+.footer a {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    height: 15vh;
+}
+
+.footer li {
+    line-height: 1.9;
+}
+
+.footer .lang-select {
+    margin-top: 2rem;
+    color: #999;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #333;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+}
+
+#language-dropdown {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "FontAwesome", "Arial";
+}
+
+@media (max-width: 760px) {
+    .footer {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.8);
+        max-width: 100%;
+        padding: 0.5rem 10rem;
+        margin: 0.1rem 0 auto;
+        overflow: auto;
+        margin-top: 2rem;
+    }
+    .footer,
+    .footer a {
+        color: #999;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    .footer p {
+        display: block;
+        margin-bottom: 1.5rem;
+        margin-left: -10rem;
+    }
+    .footer .footer-cols {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.7rem;
+        height: 10vh;
+        margin-left: -8rem;
+    }
+    .footer .lang-select {
+        font-size: 0.5;
+        margin-top: 2rem;
+        padding: 0.1rem 0.6rem;
+    }
+    #language-dropdown {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        margin-top: 2rem;
+        margin-left: -8rem;
+    }
+}
